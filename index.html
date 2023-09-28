@@ -36,8 +36,51 @@
                     <a href="#about-us">узнать больше</a>
                 </div>
             </section>
-            <section id="about-us"></section>
-            <section id="pictures"></section>
+            <section id="about-us">
+                <h2>Почему мы лучшие</h2>
+                <ul>
+                    <li>
+                        <img src="public/sections/benefits/alien_1f47d.png" alt="">
+                        <h3>Инновационность</h3>
+                    </li>
+                    <li>
+                        <img src="public/sections/benefits/jack-o-lantern_1f383.png" alt="">
+                        <h3>Миловидность</h3>
+                    </li>
+                    <li>
+                        <img src="public/sections/benefits/vampire_light-skin-tone_1f9db-1f3fb_1f3fb.png" alt="">
+                        <h3>Въедливость</h3>
+                    </li>
+                </ul>
+            </section>
+            <section id="pictures">
+                <h2>Галлерея</h2>
+                <ul>
+                    <li><img src="public/baby-chick_1f424.png" alt=""></li>
+                    <li><img src="public/dna_1f9ec.png" alt="">
+                        <h3>Проще – лучше</h3>
+                    </li>
+                    <li><img src="public/bomb_1f4a3.png" alt=""></li>
+                    <li><img src="public/frog_1f438.png" alt="">
+                        <h3>Ква</h3>
+                    </li>
+                    <li><img src="public/fox_1f98a.png" alt=""></li>
+                    <li><img src="public/mechanical-arm_1f9be.png" alt="">
+                        <h3>Киборг</h3>
+                    </li>
+                    <li><img src="public/hedgehog_1f994.png" alt=""></li>
+                    <li><img src="public/globe-showing-europe-africa_1f30d.png" alt="">
+                        <h3>Мой дом</h3>
+                    </li>
+                    <li><img src="public/ice_1f9ca.png" alt=""></li>
+                    <li><img src="public/orangutan_1f9a7.png" alt=""></li>
+                    <li><img src="public/shark_1f988.png" alt=""></li>
+                    <li><img src="public/tomato_1f345.png" alt=""></li>
+                    <li><img src="public/trophy_1f3c6.png" alt="">
+                        <h3>Забрал лут</h3>
+                    </li>
+                </ul>
+            </section>
             <section id="feedback"></section>
         </main>
         <footer>подвал</footer>
@@ -109,7 +152,19 @@
     <!-- ScrollReveal -->
     <script src="js/scrollreveal.min.js"></script>
     <script>
-        ScrollReveal().reveal("#welcome img", { distance: "40%", opacity: "0%", origin: "bottom", duration: 1500 })
+        const SlideUp = {
+            distance: "40%", opacity: "0%", origin: "bottom", duration: 1500
+        }
+
+        const SlideLeft = {
+            distance: "20%", opacity: "0%", origin: "right", duration: 1500
+        }
+
+        ScrollReveal().reveal("#welcome img", SlideUp)
+        ScrollReveal().reveal("#welcome div", SlideLeft)
+        ScrollReveal().reveal("#about-us li:nth-child(1)", SlideUp)
+        ScrollReveal().reveal("#about-us li:nth-child(2)", { ...SlideUp, delay: 1000 })
+        ScrollReveal().reveal("#about-us li:nth-child(3)", { ...SlideUp, delay: 2000 })
     </script>
 </body>
 
